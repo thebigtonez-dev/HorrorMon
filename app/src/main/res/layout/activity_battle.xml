@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0d0d0d"
+    android:padding="12dp">
+
+    <!-- Enemy Pokemon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/enemyNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enemy Creature"
+            android:textSize="18sp"
+            android:textColor="#ff0000"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/enemyImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="Enemy Pokemon"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HP:"
+                android:textColor="#ffffff" />
+
+            <ProgressBar
+                android:id="@+id/enemyHpBar"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:progress="100"
+                android:progressBackgroundTint="#333333"
+                android:progressTint="#ff0000"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Battle Log -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginVertical="12dp"
+        android:background="#1a1a1a"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/battleLogText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Battle Log:"
+            android:textColor="#cc00cc"
+            android:textSize="12sp" />
+
+    </ScrollView>
+
+    <!-- Player Pokemon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/playerNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Creature"
+            android:textSize="18sp"
+            android:textColor="#00ff00"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/playerImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="Player Pokemon"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HP:"
+                android:textColor="#ffffff" />
+
+            <ProgressBar
+                android:id="@+id/playerHpBar"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:progress="100"
+                android:progressBackgroundTint="#333333"
+                android:progressTint="#00ff00"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Moves -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:layout_marginTop="12dp"
+        android:spacing="8dp">
+
+        <Button
+            android:id="@+id/move1Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Move 1"
+            android:backgroundTint="#6600cc"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/move2Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Move 2"
+            android:backgroundTint="#6600cc"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/move3Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Move 3"
+            android:backgroundTint="#6600cc"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/move4Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Move 4"
+            android:backgroundTint="#6600cc"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:backgroundTint="#333333"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
